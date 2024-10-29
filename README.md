@@ -25,6 +25,6 @@
 
 ## 六、功能截图
 ### 书签列表
-![列表](./screenshots/bookmark-list.png)
+![列表](screenshots/bookmark-list.png)
 ### 书签添加
-![添加](./screenshots/add-bookmark.png)
+![添加](screenshots/add-bookmark.png)
