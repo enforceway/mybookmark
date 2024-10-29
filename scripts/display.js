@@ -33,6 +33,14 @@ document.getElementById('saveBtn').addEventListener('click', function() {
     }
 });
 
+// 移除书签的函数
+function removeBookmark(index) {
+    var bookmarks = JSON.parse(localStorage.getItem('bookmarks')) || [];
+    bookmarks.splice(index, 1);
+    localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
+    displayBookmarks();  // 重新加载书签列表
+}
+
 function displayBookmarks() {
     var bookmarks = JSON.parse(localStorage.getItem('bookmarks')) || [];
     var ul = document.getElementById('bookmarkUl');
@@ -40,7 +48,20 @@ function displayBookmarks() {
     for (var i = 0; i < bookmarks.length; i++) {
         var li = document.createElement('li');
         li.className = 'list-group-item';
-        li.innerHTML = bookmarks[i].name + ' - ' + bookmarks[i].url;
+
+        var text = bookmarks[i].name + ' - ' + bookmarks[i].url;
+        li.innerHTML = text;
+
+        (function(index) {
+            var removeBtn = document.createElement('button');
+            removeBtn.className = 'btn btn-danger btn-sm float-end';
+            removeBtn.textContent = '移除';
+            removeBtn.addEventListener('click', function() {
+                removeBookmark(index);
+            });
+            li.appendChild(removeBtn);
+        })(i);
+
         ul.appendChild(li);
     }
 }
