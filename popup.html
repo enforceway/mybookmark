@@ -1,17 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Bookmark Saver</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-    }
-  </style>
+    <meta charset="utf-8">
+    <title>书签保存器</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+    <link ref="stylesheet" href="./styles/style.css">
+    <style>
+        
+    </style>
 </head>
 <body>
-  <input type="text" id="bookmarkName" placeholder="Bookmark Name">
-  <input type="text" id="bookmarkUrl" placeholder="Bookmark URL">
-  <button id="saveBtn">Save</button>
-  <script src="scripts/popup.js"></script>
+
+    <!-- 书签列表 -->
+    <div id="bookmarkList" class="bookmarkList">
+        <h2 class="bookmarkList-title">书签列表<button id="showAddFormBtn" type="button" class="btn btn-primary btn-sm">显示添加界面</button></h2>
+        <div>
+            <ul id="bookmarkUl" class="list-group"></ul>
+        </div>
+    </div>
+
+    <!-- 书签添加界面 -->
+    <div id="bookmarkForm" style="display: none;">
+        <form>
+            <div class="mb-3">
+                <label for="bookmarkName" class="form-label">书签名称</label>
+                <input type="text" class="form-control" id="bookmarkName" placeholder="书签名称">
+            </div>
+            <div class="mb-3">
+                <label for="bookmarkUrl" class="form-label">书签 URL</label>
+                <input type="text" class="form-control" id="bookmarkUrl" placeholder="书签 URL">
+            </div>
+            <div class="form-footer">
+                <button type="button" id="saveBtn" class="btn btn-primary">保存</button>
+                <button type="button" id="closeBtn" class="btn btn-secondary">关闭</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- 添加 Bootstrap 的 JavaScript 文件 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"></script>
+    <script src="scripts/display.js"></script>
 </body>
 </html>

@@ -11,3 +11,6 @@ document.getElementById('saveBtn').addEventListener('click', function () {
         alert('Please enter both name and URL.');
     }
 });
+window.error = function(err) {
+    console.log(err);
+};
