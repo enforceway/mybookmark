@@ -1,13 +1,13 @@
 {
-    "name": "Simple Chrome Extension",
+    "name": "Bookmark Saver Extension",
     "version": "1.0",
-    "description": "A simple Chrome extension example",
     "manifest_version": 2,
+    "description": "Saves bookmarks",
     "browser_action": {
-        "default_icon": "assets/icon.png",
-        "default_popup": "popup.html"
+      "default_icon": "assets/icon.png",
+      "default_popup": "popup.html"
     },
     "permissions": [
-        "activeTab"
+      "activeTab"
     ]
-}
+  }

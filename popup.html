@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Popup</title>
+  <title>Bookmark Saver</title>
   <style>
     body {
-      width: 300px;  /* 设置宽度为 300 像素 */
-      height: 200px; /* 设置高度为 200 像素 */
-      background-color: red; /* 设置背景颜色为浅蓝色 */
       font-family: Arial, sans-serif;
     }
   </style>
 </head>
 <body>
-  <h1>Hello from the extension!</h1>
-  <script src="scripts/popover.js"></script>
+  <input type="text" id="bookmarkName" placeholder="Bookmark Name">
+  <input type="text" id="bookmarkUrl" placeholder="Bookmark URL">
+  <button id="saveBtn">Save</button>
+  <script src="scripts/popup.js"></script>
 </body>
 </html>
