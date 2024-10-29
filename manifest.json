@@ -1,0 +1,13 @@
+{
+    "name": "Simple Chrome Extension",
+    "version": "1.0",
+    "description": "A simple Chrome extension example",
+    "manifest_version": 2,
+    "browser_action": {
+        "default_icon": "assets/icon.png",
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "activeTab"
+    ]
+}
